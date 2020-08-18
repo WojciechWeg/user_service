@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(UserController.BASE_URL)
@@ -35,5 +36,8 @@ public class UserController {
        return userService.getAllUsers();
     }
 
-
+    @GetMapping({"/{userName}"})
+    public Optional<UserEntity> getUserById(@PathVariable String userName){
+        return userService.getUserById(userName);
+    }
 }
