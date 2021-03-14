@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-service-eureka-client
+    name: USER-SERVICE
 server:
   port: 0
 eureka:
